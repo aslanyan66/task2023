@@ -2,12 +2,15 @@
 
 #### A simple countdown timer web application built with React.
 
+#### I put my task on AWS EC2. You can find it at this link: http://ec2-52-59-157-46.eu-central-1.compute.amazonaws.com/
+
 ## Table of Contents
 - [Installation](#installation)
 - [Docker Usage](#docker-usage)
 - [Usage](#usage)
 - [Code Styles](#code-styles)
 - [Contributing](#contributing)
+- [Todo](#todo)
 
 ## Installation
 
@@ -74,6 +77,11 @@ Once the application is running, you can set a countdown timer by selecting a du
 #### `yarn lint`
 #### `yarn lint:fix`
 #### `yarn format`
+
+## Todo
+
+#### ● Add webpack configs for prod and dev modes
+#### ● Coverage with unit tests
 
 ## Contributing
 Contributions are always welcome! If you find a bug or have a feature request, please open an issue. If you would like to contribute code, please fork the repository and submit a pull request.
