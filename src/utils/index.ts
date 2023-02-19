@@ -1,4 +1,4 @@
-export const getCurrentTimeForShow = (duration: number) => {
+export const getCurrentTimeToStr = (duration: number) => {
   const dateObj = new Date(duration)
   const minutes = dateObj.getMinutes()
   const seconds = dateObj.getSeconds()
@@ -12,7 +12,6 @@ export const getCurrentTimeForShow = (duration: number) => {
 export const timeToMilliseconds = (time: number, unit: number) => time * unit
 
 export const isValidTimeForCount = (duration: number) => {
-  console.log(duration, 'duration')
   if (duration === 0) {
     alert('Please enter positive time.')
     return
