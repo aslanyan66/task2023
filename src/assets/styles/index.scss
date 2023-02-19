@@ -1,0 +1,97 @@
+@import './reset';
+
+.app {
+  padding-top: 50px;
+
+  &-wrapper {
+    width: 300px;
+    margin: 30px auto;
+  }
+  .button-section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    & > button {
+      border: 1px solid black;
+      border-radius: 8px;
+      height: 60px;
+      position: relative;
+      transition: 0.3s ease;
+      flex: 1;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:focus {
+        background: rgba(204, 204, 204, 0.3);
+      }
+
+      &:active {
+        transform: scale(0.98);
+        opacity: 1;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        inset: 50% 0 0 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        transform: none;
+        cursor: default;
+      }
+    }
+
+    .play {
+      &:after {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 0 12px 20px;
+        border-color: transparent transparent transparent black;
+      }
+    }
+
+    .pause {
+      &:after {
+        border-left: 10px solid black;
+        border-right: 10px solid black;
+        height: 25px;
+        width: 24px;
+      }
+    }
+
+    .stop {
+      flex: 0.3;
+
+      &:after {
+        width: 25px;
+        height: 25px;
+        background: black;
+      }
+    }
+  }
+}
+
+input {
+  text-align: center;
+  width: 30%;
+  border-bottom: 1px solid black;
+  &:focus,
+  &:visited,
+  &:hover {
+    border-bottom: 1px solid black;
+    outline: none;
+  }
+}
+
+h1,
+input {
+  font-size: 20px;
+  font-weight: 600;
+}

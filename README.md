@@ -1,25 +1,33 @@
-# Getting Started with Create React App
+# Countdown App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+#### A simple countdown timer web application built with React.
 
-## Available Scripts
+## Table of Contents
+- [Installation](#installation)
+- [Docker Usage](#docker-usage)
+- [Usage](#usage)
+- [Code Styles](#code-styles)
+- [Contributing](#contributing)
 
-In the project directory, you can run:
+## Installation
 
-### `yarn start`
+#### Clone this repository to your local machine. https://github.com/aslanyan66
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Without Docker
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### To install the Countdown application without Docker,you must have the following installed on your machine:
 
-### `yarn test`
+#### `Node.js` (version 16 or higher)
+#### `Yarn` package manager (version 1 or higher)
+### Follow these steps to install the Countdown application:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 1. Navigate to the cloned directory in your terminal.
+#### 2. Run `yarn install` to install the necessary dependencies.
+#### 3. Run `yarn start` to start the application.
+#### 4. Open a web browser and go to http://localhost:3000 to view the application.
 
-### `yarn build`
+### To build the app for production, run:
+#### `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,18 +37,44 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Docker Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### To install the Countdown application with Docker, you must have the following installed on your machine:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Docker` (version 21.1 or higher)
+### `Docker-Compose` (version 1.29 or higher)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Development
+#### To run the application in development mode with Docker, follow these steps:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 1. Navigate to the cloned directory in your terminal.
+#### 2. Run `docker-compose up app-dev` to start the application in development mode.
+#### 3. Open a web browser and go to http://localhost:3000 to view the application.
 
-## Learn More
+### Production
+#### To run the application in production mode with Docker, follow these steps:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 1. Navigate to the cloned directory in your terminal.
+#### 2. Run `docker-compose up app-prod` to build and start the application in production mode.
+#### 3. Open a web browser and go to http://localhost to view the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+
+Once the application is running, you can set a countdown timer by selecting a duration and unit of time from the dropdown menus, then clicking the "Start" button. The remaining time will be displayed in real-time, and the countdown will stop when it reaches zero.
+
+## Code Styles
+### To maintain code style consistency, you can use the following scripts: before committing changes:
+
+#### `lint`: Use this script to check your code for errors and warnings. It uses ESLint and checks all JavaScript, TypeScript, JSON, and JSX files in the src directory.
+#### `lint:fix`: Use this script to automatically fix some of the issues reported by the lint script.
+#### `format`: Use this script to format your code automatically using Prettier. It formats all JavaScript, TypeScript, JSON, CSS, SCSS, and Markdown files in the src directory based on the configuration in .prettierrc file.
+
+#### ● To run any of these scripts, simply type the corresponding command in your terminal:
+
+#### `yarn lint`
+#### `yarn lint:fix`
+#### `yarn format`
+
+## Contributing
+Contributions are always welcome! If you find a bug or have a feature request, please open an issue. If you would like to contribute code, please fork the repository and submit a pull request.
+

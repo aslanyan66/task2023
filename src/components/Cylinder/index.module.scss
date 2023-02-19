@@ -1,0 +1,15 @@
+.wrapper {
+  height: 400px;
+  border: 1px solid black;
+  position: relative;
+
+  .container {
+    background: #cfe2f3;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    transition: height 60ms;
+  }
+}

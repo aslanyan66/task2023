@@ -1,0 +1,37 @@
+%styles {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.wrapper {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 65%;
+    right: 12px;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-top-color: #000;
+    pointer-events: none;
+  }
+}
+
+.container {
+  cursor: pointer;
+  border: 1.5px solid black;
+  border-radius: 8px;
+  height: 60px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  padding: 8px 16px;
+  width: 100%;
+  @extend %styles;
+
+  & > option {
+    @extend %styles;
+  }
+}
