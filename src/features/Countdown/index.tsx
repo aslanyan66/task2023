@@ -5,7 +5,6 @@ import { timeUnits } from 'constants/time'
 import { getCurrentTimeToStr, timeToMilliseconds, isValidTimeForCount } from 'utils'
 import { initialCountdownState, countdownReducer } from './reducer'
 import { ICountDownUnit } from 'types/countdown.types'
-
 const Countdown = () => {
   const [countdownState, dispatch] = useReducer(countdownReducer, initialCountdownState)
   const { delay, timeRemaining, selectedTime, selectedUnit, countdownStatus } = countdownState
