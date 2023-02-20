@@ -1,8 +1,8 @@
-import React, { ChangeEvent, useCallback, useEffect, useReducer, useRef } from 'react'
+import React, { ChangeEvent, useCallback, useEffect, useReducer } from 'react'
 import { Cylinder, Select, ButtonsSection } from 'components'
 import styles from './index.module.scss'
 import { timeUnits } from 'constants/time'
-import { getCurrentTimeForShow, timeToMilliseconds, isValidTimeForCount } from 'utils'
+import { getCurrentTimeToStr, timeToMilliseconds, isValidTimeForCount } from 'utils'
 import { initialCountdownState, countdownReducer } from './reducer'
 import { ICountDownUnit } from 'types/countdown.types'
 
@@ -10,12 +10,6 @@ const Countdown = () => {
   const [countdownState, dispatch] = useReducer(countdownReducer, initialCountdownState)
   const { delay, timeRemaining, selectedTime, selectedUnit, countdownStatus } = countdownState
   const isStopped = countdownStatus === 'stopped'
-
-  const timeInputRef = useRef<HTMLInputElement>(null)
-
-  useEffect(() => {
-    timeInputRef.current?.focus()
-  }, [])
 
   useEffect(() => {
     let interval: NodeJS.Timeout | undefined
@@ -56,7 +50,7 @@ const Countdown = () => {
   const onCountPause = useCallback(() => dispatch({ type: 'pause' }), [])
   const onCountResume = useCallback(() => dispatch({ type: 'resume' }), [])
 
-  const showingTime = getCurrentTimeForShow(timeRemaining)
+  const showingTime = getCurrentTimeToStr(timeRemaining)
 
   return (
     <div className={styles.container}>
@@ -65,7 +59,7 @@ const Countdown = () => {
       />
       <div className={styles.inputContainer}>
         {isStopped ? (
-          <input type="number" ref={timeInputRef} value={selectedTime} onChange={handleTimeInput} />
+          <input type="number" autoFocus value={selectedTime} onChange={handleTimeInput} />
         ) : (
           <h1>{showingTime}</h1>
         )}

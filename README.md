@@ -51,14 +51,14 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 #### To run the application in development mode with Docker, follow these steps:
 
 #### 1. Navigate to the cloned directory in your terminal.
-#### 2. Run `docker-compose up app-dev` to start the application in development mode.
+#### 2. Run `docker-compose up -d app-dev` to start the application in development mode. `-d or --detach` means that the container will run in the background
 #### 3. Open a web browser and go to http://localhost:3000 to view the application.
 
 ### Production
 #### To run the application in production mode with Docker, follow these steps:
 
 #### 1. Navigate to the cloned directory in your terminal.
-#### 2. Run `docker-compose up app-prod` to build and start the application in production mode.
+#### 2. Run `docker-compose up -d app-prod` to build and start the application in production mode. `-d or --detach` means that the container will run in the background
 #### 3. Open a web browser and go to http://localhost to view the application.
 
 ## Usage
