@@ -2,7 +2,7 @@
 
 #### A simple countdown timer web application built with React.
 
-#### I put my task on AWS EC2. You can find it at this link: http://ec2-52-59-157-46.eu-central-1.compute.amazonaws.com/
+#### I put my task on AWS EC2. You can find it at this link: http://ec2-3-74-186-247.eu-central-1.compute.amazonaws.com/
 
 ## Table of Contents
 - [Installation](#installation)
