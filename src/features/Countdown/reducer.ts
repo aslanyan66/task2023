@@ -46,7 +46,7 @@ export function countdownReducer(
         selectedUnit: action.payload,
       }
     case 'stop':
-      return { ...initialCountdownState }
+      return initialCountdownState
     default:
       return state
   }

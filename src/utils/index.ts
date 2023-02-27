@@ -2,7 +2,7 @@ export const getCurrentTimeToStr = (duration: number) => {
   const dateObj = new Date(duration)
   const minutes = dateObj.getMinutes()
   const seconds = dateObj.getSeconds()
-  const milliseconds = dateObj.getMilliseconds().toFixed(1)[0]
+  const milliseconds = dateObj.getMilliseconds().toString()[0]
 
   const timeToShow = [minutes, seconds].map((val) => (val < 10 ? '0' + val : val)).join(':')
 
