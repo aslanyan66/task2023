@@ -1,11 +1,9 @@
-import { Countdown } from 'components/index'
+import Countdown from 'features/Countdown'
 
 const App = () => {
   return (
     <div className="app">
-      <div className="app-wrapper">
-        <Countdown />
-      </div>
+      <Countdown />
     </div>
   )
 }

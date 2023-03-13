@@ -17,5 +17,4 @@ const ButtonsSection = memo(({ countdownStatus, handleStart, handlePause, handle
 })
 
 ButtonsSection.displayName = 'ButtonsSection'
-
 export default ButtonsSection

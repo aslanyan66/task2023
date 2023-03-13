@@ -14,7 +14,7 @@
 
 ## Installation
 
-#### Clone this repository to your local machine. https://github.com/aslanyan66
+#### Clone this repository to your local machine. https://github.com/aslanyan66/task2023
 
 ### Without Docker
 

@@ -10,7 +10,6 @@ type IProps = {
 const Select = memo(({ onChange, options, defaultValue }: IProps) => {
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) =>
     onChange(Number(event.target.value))
-
   return (
     <div className={styles.wrapper}>
       <select className={styles.container} onChange={handleChange} defaultValue={defaultValue}>

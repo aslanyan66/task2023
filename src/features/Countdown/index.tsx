@@ -1,10 +1,10 @@
 import React, { ChangeEvent, useCallback, useEffect, useReducer } from 'react'
 import { Cylinder, Select, ButtonsSection } from 'components'
-import styles from './index.module.scss'
 import { timeUnits } from 'constants/time'
 import { getCurrentTimeToStr, timeToMilliseconds, isValidTimeForCount } from 'utils'
 import { initialCountdownState, countdownReducer } from './reducer'
 import { ICountDownUnit } from 'types/countdown.types'
+import styles from './index.module.scss'
 const Countdown = () => {
   const [countdownState, dispatch] = useReducer(countdownReducer, initialCountdownState)
   const { delay, timeRemaining, selectedTime, selectedUnit, countdownStatus } = countdownState

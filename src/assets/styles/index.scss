@@ -2,11 +2,9 @@
 
 .app {
   padding-top: 50px;
+  width: 300px;
+  margin: 30px auto;
 
-  &-wrapper {
-    width: 300px;
-    margin: 30px auto;
-  }
   .button-section {
     display: flex;
     flex-direction: row;
